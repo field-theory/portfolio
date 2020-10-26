@@ -30,3 +30,12 @@ pip install -r requirements.txt
 ```
 
 Now running `example1.py` and `example2.py` will also generate the figures seen in the blog post.
+
+## Running tests
+
+This repository contains a small collection of test cases that are run on <https://travis-ci.org>.
+
+They can be run manually via
+```bash
+pytest
+```
