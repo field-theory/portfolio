@@ -13,11 +13,6 @@ Summary:
     system dynamics, neural networks or other methods) or interfaces
     to such models.
 
-    Classes implemented:
-    - HistoricalQuotes
-    - TimeSeries
-    - DataSource
-
 Note:
     The code to download historical quotes may no longer be functional.
 
@@ -32,7 +27,7 @@ Copyright:
 
 # region Imports
 
-import datetime, math, warnings
+import math
 
 
 # endregion
@@ -65,19 +60,21 @@ class HistoricalQuotes:
 
     quote_data = []
 
-    def __init__(self, start_date, end_date, stock=DJ, spacing='d'):
+    def __init__(self, start_date: object, end_date: object, stock: str = DJ, spacing: str = 'd'):
         """Download and set up the requested history.
 
         This method downloads the requested history and sets it up
         properly.
 
-        @param start_date Start of history, instance of datetime.date.
-        @param end_date End of history, instance of datetime.date.
-        @param stock Requested stock symbol, defaults to '^DJI'.
-        @param spacing Time between subsequent history points.
+        Args:
+            start_date: Start of history, instance of `datetime.date`.
+            end_date: End of history, instance of datetime.date.
+            stock: Requested stock symbol, defaults to '^DJI'.
+            spacing: Time between subsequent history points.
+
         """
 
-        import urllib.request, urllib.error, urllib.parse
+        import urllib.request, urllib.parse
 
         query = ('http://ichart.finance.yahoo.com/table.csv?' +
                  ('s=%s&d=%d&e=%d&f=%d&g=%s&a=%d&b=%d&c=%d&ignore=.csv' %
@@ -157,8 +154,8 @@ class TimeSeries:
         else:
             return float('nan')
 
-    def correlation_with(self, other_series):
-        """Return the correlation of the current and another time series."""
+    def covariance_with(self, other_series):
+        """Return the covariance of the current and another time series."""
         if ((self.length() != other_series.length()) or
                 (self.length() < 2)):
             return 0.0
@@ -176,12 +173,7 @@ class TimeSeries:
 class DataSource(TimeSeries):
     """Provides input for the Portfolio class.
 
-    A Portfolio class data source must provide the following methods:
-    - __init__
-    - get_name
-    - volatility
-    - expected_return
-    - correlation_with
+    In addition to `TimeSeries` this class also supports a name for the series.
 
     """
 
