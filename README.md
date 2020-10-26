@@ -11,6 +11,7 @@ I had originally written the programs using Python 2.6, but have now migrated th
 ## Running the examples
 
 Two programs can be invoked directly with:
+
 `example1.py`
 : Get the risk-return profile of asset allocations for the first dataset (two assets).
 
@@ -21,7 +22,7 @@ If all dependencies listed in `requirements.txt` are installed plots in `.png` f
 
 ## Creating nice figures
 
-For generating the figures the dependencies in `requirements.txt` are needed. The easiest way to install those is to use a virtual environment:
+For generating the figures the dependencies in `requirements.txt` are needed. The easiest way to handle that is a virtual environment:
 ```bash
 python3 -m venv venv3
 source venv3/bin/activate
