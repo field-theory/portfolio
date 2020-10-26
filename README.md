@@ -1,5 +1,7 @@
 # Portfolio
 
+[![Build Status](https://travis-ci.org/field-theory/portfolio.png?branch=master)](https://travis-ci.org/field-theory/portfolio)
+
 This is a collection of Python programs to illustrates the modern portfolio strategy by Harry Markowitz with fictional assets.
 
 You can apply the programs to analyze real historical assets, but these are not included for legal reasons. Furthermore, real assets do not follow a Gaussian distribution at their edges, so any estimates for volatility, performance and correlation may not be sufficient to bet your money on them!
