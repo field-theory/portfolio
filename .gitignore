@@ -132,4 +132,6 @@ dmypy.json
 /*.png
 /venv3
 *.bak
+.idea
+
 
