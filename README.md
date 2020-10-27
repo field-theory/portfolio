@@ -1,6 +1,6 @@
-# Portfolio
+[![Build Status](https://travis-ci.org/field-theory-org/portfolio.png?branch=main)](https://travis-ci.org/field-theory-org/portfolio) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/field-theory-org/portfolio/main/LICENSE)
 
-[![Build Status](https://travis-ci.org/field-theory/portfolio.png?branch=main)](https://travis-ci.org/field-theory/portfolio)
+# Portfolio
 
 This is a collection of Python programs to illustrate the modern portfolio strategy by Harry Markowitz with fictional assets.
 
